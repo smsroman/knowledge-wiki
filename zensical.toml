@@ -1,0 +1,69 @@
+[project]
+site_name = "База знаний"
+site_description = "Открытая вики: понятные инструкции, полезные материалы и проверенные знания на любые темы."
+site_url = "https://wiki.00340034.xyz/"
+repo_url = "https://github.com/smsroman/knowledge-wiki"
+repo_name = "smsroman/knowledge-wiki"
+edit_uri = "edit/main/docs/"
+extra_css = ["assets/stylesheets/extra.css"]
+nav = [
+  { "Главная" = "index.md" },
+  { "Материалы" = [
+    { "Каталог" = "materials/index.md" },
+    { "Как проверять информацию" = "materials/check-information.md" },
+    { "Как организовать заметки" = "materials/organize-notes.md" },
+  ] },
+  { "Участие" = [
+    { "Как предложить правку" = "contributing.md" },
+    { "Оформление статей" = "writing.md" },
+    { "Шаблон статьи" = "template.md" },
+  ] },
+  { "О вики" = "about.md" },
+]
+
+[project.theme]
+variant = "classic"
+language = "ru"
+favicon = "assets/favicon.svg"
+font = false
+features = [
+  "content.action.edit", "content.action.view", "content.code.copy",
+  "navigation.footer", "navigation.indexes", "navigation.instant",
+  "navigation.sections", "navigation.top", "navigation.tracking",
+  "search.highlight", "toc.follow",
+]
+
+[project.theme.icon]
+logo = "material/book-open-page-variant"
+edit = "material/pencil"
+view = "material/file-document-outline"
+repo = "fontawesome/brands/github"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "blue grey"
+accent = "blue"
+toggle.icon = "material/weather-night"
+toggle.name = "Переключить на тёмную тему"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "blue grey"
+accent = "blue"
+toggle.icon = "material/weather-sunny"
+toggle.name = "Переключить на светлую тему"
+
+[project.markdown_extensions]
+admonition = {}
+attr_list = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.details = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.inlinehilite = {}
+pymdownx.superfences = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"

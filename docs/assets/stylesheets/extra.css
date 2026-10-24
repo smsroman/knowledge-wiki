@@ -1,0 +1,11 @@
+ :root {
+  --md-text-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --md-code-font: ui-monospace, "Cascadia Code", "Liberation Mono", monospace;
+}
+.md-typeset h1 { font-weight: 650; letter-spacing: -.025em; }
+.md-typeset .lead { font-size: 1.15em; color: var(--md-default-fg-color--light); }
+.md-typeset .grid.cards > ul > li { border-radius: .6rem; }
+.md-typeset .grid.cards > ul > li:hover { border-color: var(--md-accent-fg-color); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
